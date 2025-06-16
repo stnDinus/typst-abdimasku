@@ -29,6 +29,7 @@
 #let caption_font_size = 10pt
 #let title_font_size = 18pt
 #let author_info_font_size = 11pt
+#let heading_1_numbering_size = 10pt
 #let line_height = .65em
 #let month_translation = (
   "Januari",
@@ -75,8 +76,13 @@
 #show heading.where(depth: 1): it => {
   set align(center)
   set text(style: "normal")
-  set block(below: 2 * line_height)
-  upper(it)
+  block(below: 2 * line_height)[
+    #text(
+      counter(heading).display(it.numbering),
+      size: heading_1_numbering_size,
+    )
+    #upper(it.body)
+  ]
 }
 #show heading: it => {
   set block(above: 2 * line_height)
