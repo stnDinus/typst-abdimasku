@@ -55,7 +55,7 @@
 // settings
 #set text(lang: "id", size: font_size)
 #set par(justify: true, leading: line_height, spacing: line_height)
-#set math.equation(numbering: "(1)")
+#set math.equation(numbering: "(1)", supplement: "Persamaan ")
 #context counter(page).update(starting_page)
 #set page(
   margin: 1.18in,
@@ -153,7 +153,7 @@
 #lorem(50)
 
 = Metode
-#lorem(100)
+#lorem(100) @eq:
 $
   sum_(k=0)^n k & = 1 + ... + n \
               F & = x
