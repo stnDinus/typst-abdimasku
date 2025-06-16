@@ -83,6 +83,11 @@
   set text(size: font_size, weight: "regular", style: "italic")
   it
 }
+#set figure.caption(separator: ". ")
+#show figure.caption: set text(size: caption_font_size)
+#show figure.where(kind: table): set figure.caption(position: top)
+#show figure.where(kind: table): set figure(supplement: "Tabel")
+#show figure.where(kind: image): set figure(supplement: "Gambar")
 
 // body
 // title
@@ -159,3 +164,18 @@ $
               F & = x
 $  <eq>
 
+#lorem(20)
+#figure(
+  table(
+    columns: 2,
+    align: center,
+    [Foo], [Bar],
+    [Baz], [Foobar],
+  ),
+  caption: "Example table",
+)
+#lorem(20)
+#figure(
+  image("freebsd-logo-2812857395.png", width: 10em),
+  caption: "Example image",
+)
