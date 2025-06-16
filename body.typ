@@ -2,11 +2,7 @@
 #let starting_page = 1
 #let journal_vol = [x]
 #let article_no = [x]
-#let pub_date = datetime(
-  year: 2025,
-  month: 2,
-  day: 3,
-)
+#let pub_date = datetime.today()
 #let title = lorem(6)
 #let departments = (
   "Fakultas Ilmu Komputer, Universitas Dian Nuswantoro Semarang",
