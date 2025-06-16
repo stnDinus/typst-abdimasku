@@ -15,8 +15,8 @@
   ),
 )
 #let abstract = (
-  [#lorem(100)],
-  [#lorem(100)], // translation (i.e. english)
+  [#lorem(50)],
+  [#lorem(50)], // translation (i.e. english)
 )
 #let keywords = (
   ("Foo", "Bar", "Baz"),
@@ -55,6 +55,7 @@
 // settings
 #set text(lang: "id", size: font_size)
 #set par(justify: true, leading: line_height, spacing: line_height)
+#set math.equation(numbering: "(1)")
 #context counter(page).update(starting_page)
 #set page(
   margin: 1.18in,
@@ -152,4 +153,9 @@
 #lorem(50)
 
 = Metode
-#lorem(1000)
+#lorem(100)
+$
+  sum_(k=0)^n k & = 1 + ... + n \
+              F & = x
+$  <eq>
+
