@@ -33,6 +33,7 @@
 #let caption_font_size = 10pt
 #let title_font_size = 18pt
 #let author_info_font_size = 11pt
+#let line_height = .65em
 #let month_translation = (
   "Januari",
   "Februari",
@@ -57,7 +58,7 @@
 
 // settings
 #set text(lang: "id", size: font_size)
-#set par(justify: true)
+#set par(justify: true, leading: line_height, spacing: line_height)
 #context counter(page).update(starting_page)
 #set page(
   margin: 1.18in,
@@ -77,21 +78,24 @@
 #show heading.where(depth: 1): it => {
   set align(center)
   set text(style: "normal")
+  set block(below: 2 * line_height)
   upper(it)
 }
 #show heading: it => {
+  set block(above: 2 * line_height)
   set text(size: font_size, weight: "regular", style: "italic")
   it
 }
 
 // body
 // title
+#v(line_height)
 #text(size: title_font_size)[
   #set align(center)
   #title
 ]
-
 // authors
+#v(line_height)
 #{
   set align(center)
   [
@@ -121,19 +125,21 @@
     )
   ]
 }
-
+#v(line_height * 2)
 // abstract
 #abstract_heading([Abstrak])
 #abstract.at(0)
-
-Kata kunci: #keywords.at(0).join(keyword_separator)
+#block(above: line_height * 2, below: line_height * 2)[
+  Kata kunci: #keywords.at(0).join(keyword_separator)
+]
 
 // abstract translatioin
 #set text(style: "italic")
 #abstract_heading([Abstract])
 #abstract.at(1)
-
-Keywords: #keywords.at(1).join(keyword_separator)
+#block(above: line_height * 2, below: line_height * 3)[
+  Keywords: #keywords.at(1).join(keyword_separator)
+]
 
 #set text(style: "normal")
 #set par(first-line-indent: (
@@ -142,7 +148,9 @@ Keywords: #keywords.at(1).join(keyword_separator)
 ))
 
 = Pendahuluan
-#lorem(100)
+#lorem(25)
+
+#lorem(25)
 
 == Subbab
 #lorem(50)
