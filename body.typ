@@ -78,7 +78,7 @@
   set text(style: "normal")
   block(below: 2 * line_height)[
     #text(
-      counter(heading).display(it.numbering),
+      if type(it.numbering) == str { counter(heading).display(it.numbering) },
       size: heading_1_numbering_size,
     )
     #upper(it.body)
@@ -94,6 +94,7 @@
 #show figure.where(kind: table): set figure.caption(position: top)
 #show figure.where(kind: table): set figure(supplement: "Tabel")
 #show figure.where(kind: image): set figure(supplement: "Gambar")
+#set bibliography(title: "Daftar Pustaka")
 
 // body
 // title
