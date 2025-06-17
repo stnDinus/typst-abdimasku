@@ -168,8 +168,8 @@
 #lorem(100) @eq:
 $
   sum_(k=0)^n k & = 1 + ... + n \
-              F & = x
-$  <eq>
+              F & = x           \
+$ <eq>
 
 #lorem(20)
 #figure(
