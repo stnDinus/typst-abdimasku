@@ -182,7 +182,3 @@ $ <eq>
   caption: "Example table",
 )
 #lorem(20)
-#figure(
-  image("freebsd-logo-2812857395.png", width: 10em),
-  caption: "Example image",
-)
