@@ -54,7 +54,7 @@
 #let keyword_separator = ", "
 
 // settings
-#set text(lang: "id", size: font_size)
+#set text(lang: "id", size: font_size, font: "Liberation Serif")
 #set par(justify: true, leading: line_height, spacing: line_height)
 #set math.equation(numbering: "(1)", supplement: "Persamaan ")
 #context counter(page).update(starting_page)
