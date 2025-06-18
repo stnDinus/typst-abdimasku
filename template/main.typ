@@ -26,6 +26,8 @@ $ <eq>
   ),
   caption: "Example table",
 )
-#lorem(20)
+#lorem(20)@netwok2020 @netwok2022
 
 #figure(circle(), caption: [Sol])
+
+#bibliography("refs.bib")
