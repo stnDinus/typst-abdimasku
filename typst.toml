@@ -1,0 +1,15 @@
+#:schema https://www.schemastore.org/typst.json
+[package]
+name = "abdimasku-template"
+version = "0.0.1"
+compiler = "0.13.1"
+entrypoint = "lib.typ"
+authors = ["stnDinus"]
+description = "Abdimasku journal template"
+license = "GPLv3"
+categories = ["paper", "layout"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
