@@ -52,7 +52,6 @@
       "keyword 5",
       "keyword 6",
       "keyword 7",
-      "keyword 8",
     ),
   ),
   body,
@@ -65,6 +64,7 @@
   let author_info_font_size = 11pt
   let heading_1_numbering_size = 10pt
   let line_height = .65em
+  let leading = .45em
   let month_translation = (
     "Januari",
     "Februari",
@@ -89,7 +89,7 @@
 
   // settings
   set text(lang: "id", size: font_size, font: "Times New Roman")
-  set par(justify: true, leading: line_height, spacing: line_height)
+  set par(justify: true, leading: leading, spacing: leading)
   set math.equation(numbering: "(1)", supplement: "Persamaan ")
   context counter(page).update(starting_page)
   set page(
@@ -169,7 +169,7 @@
       )
     ]
   }
-  v(line_height * 2)
+  v(line_height * 3)
   // abstract
   abstract_heading([Abstrak])
   abstract.at(0)
