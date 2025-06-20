@@ -1,3 +1,5 @@
+#import "@local/indonesian:0.0.1": indonesian
+
 #let abdimasku(
   starting_page: 1,
   journal_vol: [x],
@@ -89,8 +91,9 @@
 
   // settings
   set text(lang: "id", size: font_size, font: "Times New Roman")
+  show: indonesian.with()
   set par(justify: true, leading: leading, spacing: leading)
-  set math.equation(numbering: "(1)", supplement: "Persamaan ")
+  set math.equation(numbering: "(1)")
   context counter(page).update(starting_page)
   set page(
     margin: 1.18in,
@@ -127,9 +130,6 @@
   set figure.caption(separator: ". ")
   show figure.caption: set text(size: caption_font_size)
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.where(kind: table): set figure(supplement: "Tabel")
-  show figure.where(kind: image): set figure(supplement: "Gambar")
-  set bibliography(title: "Daftar Pustaka")
 
   // body
   // title
