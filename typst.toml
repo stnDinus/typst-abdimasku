@@ -13,3 +13,8 @@ categories = ["paper", "layout"]
 path = "template"
 entrypoint = "main.typ"
 thumbnail = "thumbnail.png"
+
+[tool.utpm]
+dependencies = [
+  "https://github.com/stnDinus/typst-indonesian/tree/05f66b1238c361a06ccd4e9e90a26220bf1c5462",
+]
