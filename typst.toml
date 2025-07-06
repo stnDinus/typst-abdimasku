@@ -4,9 +4,9 @@ name = "abdimasku-template"
 version = "0.0.1"
 compiler = "0.13.1"
 entrypoint = "lib.typ"
-authors = ["stnDinus"]
+authors = ["@stnDinus"]
 description = "Abdimasku journal template. Dependent on https://github.com/stnDinus/typst-indonesian version 0.0.1 to be installed locally"
-license = "GPLv3"
+license = "GPL-3.0-only"
 categories = ["paper", "layout"]
 
 [template]
