@@ -127,6 +127,7 @@
     set text(size: font_size, weight: "regular", style: "italic")
     it
   }
+  show figure: set block(spacing: 1.3em)
   set figure.caption(separator: ". ")
   show figure.caption: set text(size: caption_font_size)
   show figure.where(kind: table): set figure.caption(position: top)
