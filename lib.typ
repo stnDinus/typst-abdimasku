@@ -136,6 +136,7 @@
   v(line_height * 3)
   text(size: title_font_size)[
     #set align(center)
+    #set par(justify: false)
     #title
   ]
   // authors
